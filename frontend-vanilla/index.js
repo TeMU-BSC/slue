@@ -25,7 +25,8 @@ function makeRequest() {
     return false;
   }
   httpRequest.onreadystatechange = alertContents;
-  httpRequest.open('POST', 'http://localhost:5000/parse');
+  // httpRequest.open('POST', 'http://localhost:5000/parse');
+  httpRequest.open('POST', 'http://temu.bsc.es:5000/parse');
   httpRequest.setRequestHeader('Content-Type', 'application/json');
   httpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
   httpRequest.send({ key1: 'value1', key2: 'value2' });
