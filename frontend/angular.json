@@ -29,7 +29,8 @@
             ],
             "scripts": [],
             "customWebpackConfig": {
-              "path": "extra-webpack.config.js"
+              "path": "extra-webpack.config.js",
+              "replaceDuplicatePlugins": true
             }
           },
           "configurations": {
@@ -68,7 +69,8 @@
           "options": {
             "browserTarget": "slue:build",
             "customWebpackConfig": {
-              "path": "extra-webpack.config.js"
+              "path": "extra-webpack.config.js",
+              "replaceDuplicatePlugins": true
             }
           },
           "configurations": {
