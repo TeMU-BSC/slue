@@ -16,7 +16,7 @@ services:
   angular:
     build: ./frontend
     container_name: angular
-    command: ng serve --host 0.0.0.0
+    command: ng serve --host 0.0.0.0 --disableHostCheck
     ports:
       - 8888:4200
     volumes:
