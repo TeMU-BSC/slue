@@ -1,0 +1,38 @@
+[
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "name": "Steve Jobs",
+    "email": "stevejobs@example.com",
+    "title": "Director",
+    "department": "Human Resources",
+    "status": "Active",
+    "role": "Owner"
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1532910404247-7ee9488d7292?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "name": "Alicia Keys",
+    "email": "aliciakeys@example.com",
+    "title": "Executive Assistant",
+    "department": "Corporate Services",
+    "status": "Inactive",
+    "role": "Assistant"
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1505503693641-1926193e8d57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "title": "Controller",
+    "department": "Finance",
+    "status": "Active",
+    "role": "Employee"
+  },
+  {
+    "imageUrl": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    "name": "Usain Bolt",
+    "email": "usainbolt@example.com",
+    "title": "Branding Technician",
+    "department": "External Affairs",
+    "status": "Inactive",
+    "role": "Employee"
+  }
+]

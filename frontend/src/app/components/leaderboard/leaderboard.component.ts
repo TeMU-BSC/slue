@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
+import { Papa } from 'ngx-papaparse';
+import { Person } from 'src/app/models/person';
+import { Leaderboard } from 'src/app/models/leaderboard';
+import * as peopleData from 'src/assets/people.json';
 
 @Component({
   selector: 'app-leaderboard',
@@ -8,28 +11,20 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class LeaderboardComponent implements OnInit {
 
-  dataFromFile: any[];
-  selectedFile: File;
+  people: Person[] = (peopleData as any).default;
+  leaderboard: Leaderboard[];
 
-  constructor(private api: ApiService) { }
+  constructor(private papa: Papa) { }
 
   ngOnInit(): void {
-  }
-
-  /**
-   * Set the content of the uploaded file to the 'data' property.
-   * @param event JSON file upload
-   */
-  onFileSelected(event) {
-    this.selectedFile = event.target.files[0];
-    const fileReader = new FileReader();
-    fileReader.readAsText(this.selectedFile, 'UTF-8');
-    fileReader.onloadend = () => this.dataFromFile = JSON.parse(fileReader.result as string);
-    fileReader.onerror = error => console.error(error);
-  }
-
-  processData() {
-    this.api.getDataFromBackend(this.dataFromFile).subscribe(result => alert(JSON.stringify(result)));
+    this.papa.parse('assets/glue.tsv', {
+      download: true,
+      header: true,
+      delimiter: '\t',
+      skipEmptyLines: true,
+      quoteChar: '',
+      complete: results => this.leaderboard = results.data
+    });
   }
 
 }
