@@ -1,7 +1,7 @@
-export class Leaderboard {
+export interface Leaderboard {
   rank: number;
   name: string;
   model: string;
-  url: string;
   score: number;
+  url: string;
 }

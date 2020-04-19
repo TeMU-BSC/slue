@@ -8,9 +8,8 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Hello from SLUE Flask backend!'
 
-@app.route('/parse', methods=['POST'])
-def parse():
-    result = scripts.aitor.parse_tsv('data/aitor.tsv')
-    return jsonify(result)
+@app.route('/leaderboard', methods=['GET'])
+def get_leaderboard():
+    return jsonify(scripts.aitor.read_tsv('data/glue.tsv'))

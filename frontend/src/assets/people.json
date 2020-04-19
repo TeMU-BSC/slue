@@ -5,7 +5,7 @@
     "email": "stevejobs@example.com",
     "title": "Director",
     "department": "Human Resources",
-    "status": "Active",
+    "active": false,
     "role": "Owner"
   },
   {
@@ -14,7 +14,7 @@
     "email": "aliciakeys@example.com",
     "title": "Executive Assistant",
     "department": "Corporate Services",
-    "status": "Inactive",
+    "active": false,
     "role": "Assistant"
   },
   {
@@ -23,7 +23,7 @@
     "email": "johndoe@example.com",
     "title": "Controller",
     "department": "Finance",
-    "status": "Active",
+    "active": true,
     "role": "Employee"
   },
   {
@@ -32,7 +32,7 @@
     "email": "usainbolt@example.com",
     "title": "Branding Technician",
     "department": "External Affairs",
-    "status": "Inactive",
+    "active": true,
     "role": "Employee"
   }
 ]

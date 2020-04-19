@@ -4,6 +4,6 @@ export class Person {
   email: string;
   title: string;
   department: string;
-  status: string;
+  active: boolean;
   role: string;
 }

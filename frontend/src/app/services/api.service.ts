@@ -10,7 +10,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getDataFromBackend(input: any): Observable<any> {
-    return this.http.post<any>(`${environment.apiUrl}/parse`, input);
+  getLeaderboard(): Observable<any> {
+    return this.http.get<any>(`${environment.apiUrl}/leaderboard`);
   }
+
 }

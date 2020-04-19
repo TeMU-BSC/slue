@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Papa } from 'ngx-papaparse';
 import { Person } from 'src/app/models/person';
 import { Leaderboard } from 'src/app/models/leaderboard';
 import * as peopleData from 'src/assets/people.json';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-leaderboard',
@@ -14,17 +14,10 @@ export class LeaderboardComponent implements OnInit {
   people: Person[] = (peopleData as any).default;
   leaderboard: Leaderboard[];
 
-  constructor(private papa: Papa) { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.papa.parse('assets/glue.tsv', {
-      download: true,
-      header: true,
-      delimiter: '\t',
-      skipEmptyLines: true,
-      quoteChar: '',
-      complete: results => this.leaderboard = results.data
-    });
+    this.api.getLeaderboard().subscribe(data => this.leaderboard = data);
   }
 
 }
