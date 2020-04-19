@@ -1,6 +1,6 @@
 export interface Leaderboard {
   rank: number;
-  name: string;
+  author: string;
   model: string;
   score: number;
   url: string;

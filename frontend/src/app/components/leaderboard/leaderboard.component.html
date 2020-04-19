@@ -23,11 +23,11 @@
                   </th>
                   <th
                     class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                    Researcher
+                    Author
                   </th>
                   <th
                     class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                    Model name
+                    Model
                   </th>
                   <th
                     class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -42,15 +42,32 @@
                     {{ participant.rank }}
                   </td>
                   <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-900">
-                    {{ participant.name }}
+                    {{ participant.author }}
                   </td>
                   <td
                     class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-900 font-bold">
                     {{ participant.model }}
                   </td>
-                  <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-900">
+
+                  <!-- <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-900">
                     {{ participant.score }}
+                  </td> -->
+
+                  <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <span *ngIf="participant.score >= 90"
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                      {{ participant.score }}
+                    </span>
+                    <span *ngIf="participant.score < 90 && participant.score >= 80"
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      {{ participant.score }}
+                    </span>
+                    <span *ngIf="participant.score < 80"
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                      {{ participant.score }}
+                    </span>
                   </td>
+
                   <td
                     class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
                     <a href="#"

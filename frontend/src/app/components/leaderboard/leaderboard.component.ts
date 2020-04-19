@@ -17,7 +17,11 @@ export class LeaderboardComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getLeaderboard().subscribe(data => this.leaderboard = data);
+    this.api.getLeaderboard().subscribe(data => {
+      this.leaderboard = data;
+      this.leaderboard.sort((a, b) => Number(b.score) - Number(a.score));
+      this.leaderboard.forEach((participant, index) => participant.rank = index + 1);
+    });
   }
 
 }

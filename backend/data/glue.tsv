@@ -1,11 +1,30 @@
-rank	name	model	score
-1	PING-AN Omni-Sinitic	ALBERT + DAAF + NAS	90.6
-2	ERNIE Team - Baidu	ERNIE	90.4
-3	Alibaba DAMO NLP	StructBERT	90.3
-4	T5 Team - Google	T5	90.3
-5	Microsoft D365 AI & MSR AI & GATECH	MT-DNN-SMART	89.9
-6	ELECTRA Team	ELECTRA-Large + Standard Tricks	89.4
-7	Huawei Noah's Ark Lab	NEZHA-Large	88.7
-8	Microsoft D365 AI & UMD	FreeLB-RoBERTa (ensemble)	88.4
-9	Junjie Yang	HIRE-RoBERTa	88.3
-10	Facebook AI	RoBERTa	88.1
+author	model	score
+PING-AN Omni-Sinitic	ALBERT + DAAF + NAS	90.6
+ERNIE Team - Baidu	ERNIE	90.4
+Alibaba DAMO NLP	StructBERT	90.3
+T5 Team - Google	T5	90.3
+Microsoft D365 AI & MSR AI & GATECH	MT-DNN-SMART	89.9
+ELECTRA Team	ELECTRA-Large + Standard Tricks	89.4
+Huawei Noah's Ark Lab	NEZHA-Large	88.7
+Microsoft D365 AI & UMD	FreeLB-RoBERTa (ensemble)	88.4
+Junjie Yang	HIRE-RoBERTa	88.3
+Facebook AI	RoBERTa	88.1
+Microsoft D365 AI & MSR AI	MT-DNN-ensemble	87.6
+GLUE Human Baselines	GLUE Human Baselines	87.1
+Stanford Hazy Research	Snorkel MeTaL	83.2
+XLM Systems	XLM (English only)	83.1
+Zhuosheng Zhang	SemBERT	82.9
+Danqi Chen	SpanBERT (single-task training)	82.8
+Kevin Clark	BERT + BAM	82.3
+Nitish Shirish Keskar	Span-Extractive BERT on STILTs	82.3
+Jason Phang	BERT on STILTs	82.0
+Jacob Devlin	BERT: 24-layers, 16-heads, 1024-hidden	80.5
+Neil Houlsby	BERT + Single-task Adapters	80.2
+Zhuohan Li	Macaron Net-base	79.7
+蘇大鈞	SesameBERT-Base	78.6
+MobileBERT Team	MobileBERT	78.5
+Linyuan Gong	StackingBERT-Base	78.4
+NLC MSR Asia	BERT-of-Theseus (6-layer; single model)	77.1
+李jianquan	test_4_11	75.9
+YeonTaek Oh	EL-BERT(6-Layer, Single model)	75.6
+GLUE Baselines	BiLSTM+ELMo+Attn	70.0

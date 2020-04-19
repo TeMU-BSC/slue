@@ -1,0 +1,11 @@
+rank	name	model	score
+1	PING-AN Omni-Sinitic	ALBERT + DAAF + NAS	90.6
+2	ERNIE Team - Baidu	ERNIE	90.4
+3	Alibaba DAMO NLP	StructBERT	90.3
+4	T5 Team - Google	T5	90.3
+5	Microsoft D365 AI & MSR AI & GATECH	MT-DNN-SMART	89.9
+6	ELECTRA Team	ELECTRA-Large + Standard Tricks	89.4
+7	Huawei Noah's Ark Lab	NEZHA-Large	88.7
+8	Microsoft D365 AI & UMD	FreeLB-RoBERTa (ensemble)	88.4
+9	Junjie Yang	HIRE-RoBERTa	88.3
+10	Facebook AI	RoBERTa	88.1

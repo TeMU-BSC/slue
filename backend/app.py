@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-import scripts.aitor
+import scripts.functions
 
 app = Flask(__name__)
 CORS(app)
@@ -12,4 +12,4 @@ def hello_world():
 
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
-    return jsonify(scripts.aitor.read_tsv('data/glue.tsv'))
+    return jsonify(scripts.functions.read_tsv('data/glue.tsv'))
