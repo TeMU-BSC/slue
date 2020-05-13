@@ -1,5 +1,5 @@
 # Use the Python3.7 image
-FROM python:3.7-stretch
+FROM python:3.8.2-buster
 
 # Set the working directory to /app
 WORKDIR /app
