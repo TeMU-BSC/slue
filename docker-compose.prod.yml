@@ -2,17 +2,10 @@ version: '3.7'
 
 services:
 
-  # flask-prod:
-  #   container_name: flask-prod
-  #   build: ./backend
-  #   restart: always
-  #   environment:
-  #     - MONGO_URI=mongodb://mesinesp:mesinesp@bsccnio01.bsc.es:27017/BvSalud
-  #   command: uwsgi app.ini
-
-  flask-dev:
+  # DEVELOPMENT BACKEND
+  flask:
     build: ./backend
-    container_name: flask-dev
+    container_name: slue_backend
     environment:
       - FLASK_ENV=development
     command: flask run --host 0.0.0.0
@@ -21,10 +14,27 @@ services:
     volumes:
       - ./backend:/app
 
-  angular-prod:
+  # PRODUCTION BACKEND
+  # flask:
+  #   build: ./backend
+  #   container_name: flask-prod
+  #   restart: always
+  #   environment:
+  #     - MONGO_URI=mongodb://mesinesp:mesinesp@bsccnio01.bsc.es:27017/BvSalud
+  #   command: uwsgi app.ini
+
+  # angular:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile.prod
+  #   container_name: slue_frontend
+  #   ports:
+  #     - '8888:80'
+
+  alpinejs:
     build:
-      context: ./frontend
+      context: ./frontend-alpinejs
       dockerfile: Dockerfile.prod
-    container_name: angular-prod
+    container_name: slue_frontend
     ports:
       - '8888:80'
