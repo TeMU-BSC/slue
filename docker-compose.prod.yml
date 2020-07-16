@@ -19,8 +19,6 @@ services:
   #   build: ./backend
   #   container_name: flask-prod
   #   restart: always
-  #   environment:
-  #     - MONGO_URI=mongodb://mesinesp:mesinesp@bsccnio01.bsc.es:27017/BvSalud
   #   command: uwsgi app.ini
 
   # angular:
