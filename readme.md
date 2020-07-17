@@ -1,10 +1,14 @@
 # Spanish Language Understanding Evaluation (SLUE)
 
 ## Requirements
-- docker-compose: https://docs.docker.com/compose/install/
+
+* docker-compose: https://docs.docker.com/compose/install/
 
 ## Development
-```bash
+
+From your local machine:
+
+``` bash
 git clone HTTPS_URL
 cd slue
 docker-compose up
@@ -12,11 +16,14 @@ docker-compose up
 
 When the docker containers have been built and started, open your browser with http://localhost:4200.
 
-## Production (in temu.bsc.es virtual machine)
-```bash
+## Production
+
+From temu.bsc.es virtual machine:
+
+``` bash
 git clone HTTPS_URL
 cd slue
-docker-compose -f docker-compose.prod.yml up -d
+docker-compose -f docker-compose.prod.yml up --build -d
 ```
 
-When the docker containers (*-prod) have been built and started, open your browser with http://temu.bsc.es:8888.
+When the docker containers have been built and started, open your browser with http://temu.bsc.es:8888.

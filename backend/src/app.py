@@ -8,7 +8,7 @@ CORS(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from SLUE Flask backend!'
+    return 'Hello from SLUE backend in Flask!'
 
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
