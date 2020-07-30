@@ -3,8 +3,8 @@ version: '3.7'
 services:
 
   flask:
-    container_name: slue_backend
     build: ./backend
+    container_name: slue_backend
     environment:
       - FLASK_ENV=development
     command: flask run --host 0.0.0.0
@@ -23,8 +23,8 @@ services:
   #     - ./frontend:/app
 
   alpinejs:
-    container_name: slue_frontend
     build: ./frontend-alpinejs
+    container_name: slue_frontend
     command: npx lite-server
     ports:
       - 3000:3000

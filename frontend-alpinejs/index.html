@@ -139,7 +139,7 @@
   </header> -->
 
   <main>
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" x-data="{ leaderboard: [] }" x-init="fetch('http://localhost:5000/leaderboard')
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8" x-data="{ leaderboard: [] }" x-init="fetch('http://temu.bsc.es:8888/api/leaderboard')
                                                                                               .then(response => response.json())
                                                                                               .then(data => leaderboard = data)">
       <div class="flex flex-col">

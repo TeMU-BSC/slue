@@ -13,3 +13,6 @@ def hello_world():
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
     return jsonify(scripts.functions.read_tsv('data/glue.tsv'))
+
+if __name__ == "__main__":
+    app.run()

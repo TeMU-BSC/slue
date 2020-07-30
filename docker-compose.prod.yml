@@ -1,21 +1,17 @@
 version: '3.7'
-
 services:
-
-  # DEVELOPMENT BACKEND
   flask:
     build: ./backend
     container_name: slue_backend
-    command: flask run --host 0.0.0.0
+    restart: always
+    command: uwsgi app.ini
+  alpinejs:
+    build:
+      context: ./frontend-alpinejs
+      dockerfile: Dockerfile.prod
+    container_name: slue_frontend
     ports:
-      - 5000:5000
-
-  # PRODUCTION BACKEND
-  # flask:
-  #   build: ./backend
-  #   container_name: flask-prod
-  #   restart: always
-  #   command: uwsgi app.ini
+      - '8888:80'
 
   # angular:
   #   build:
@@ -24,11 +20,3 @@ services:
   #   container_name: slue_frontend
   #   ports:
   #     - '8888:80'
-
-  alpinejs:
-    build:
-      context: ./frontend-alpinejs
-      dockerfile: Dockerfile.prod
-    container_name: slue_frontend
-    ports:
-      - '8888:80'
