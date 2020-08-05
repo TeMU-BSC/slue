@@ -2,16 +2,17 @@ version: '3.7'
 services:
   flask:
     build: ./backend
-    container_name: slue_backend
-    restart: always
+    container_name: slue_backend_prod
     command: uwsgi app.ini
+    restart: always
   alpinejs:
     build:
       context: ./frontend-alpinejs
       dockerfile: Dockerfile.prod
-    container_name: slue_frontend
+    container_name: slue_frontend_prod
     ports:
       - '8888:80'
+    restart: always
 
   # angular:
   #   build:
@@ -20,3 +21,4 @@ services:
   #   container_name: slue_frontend
   #   ports:
   #     - '8888:80'
+  #   restart: always
